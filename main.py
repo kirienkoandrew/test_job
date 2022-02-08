@@ -4,8 +4,7 @@ import sqlite3
 print('''Вас приветствует программа определения точных координат введенного адреса.
 ''')
 
-# создание таблицы
-try:
+try: # создание таблицы
     sqlite_connection = sqlite3.connect('settings.db')
     sqlite_create_table_query = '''CREATE TABLE settings (token TEXT, secret TEXT, lang TEXT DEFAULT ru, base_url TEXT DEFAULT https://dadata.ru/);'''
     cursor = sqlite_connection.cursor()
